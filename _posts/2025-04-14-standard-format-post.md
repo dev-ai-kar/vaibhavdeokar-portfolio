@@ -81,8 +81,7 @@ eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere poss
 assumenda est, omnis dolor repellendus.
 </p>
 
-```css
-code {
+<pre><code class="language-css">code {
     font-size: 1.4rem;
     margin: 0 .2rem;
     padding: .2rem .6rem;
@@ -90,8 +89,7 @@ code {
     background: #F1F1F1;
     border: 1px solid #E1E1E1;
     border-radius: 3px;
-}
-```
+}</code></pre>
 
 <p>
 Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et

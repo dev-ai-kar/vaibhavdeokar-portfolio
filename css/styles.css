@@ -1909,9 +1909,10 @@ pre {
   font-family: var(--font-mono);
 }
 
+/* Revert selector back to just 'pre', ensure background is correct */
 pre {
   padding: var(--vspace-0_75) var(--vspace-1) var(--vspace-1);
-  background: var(--color-gray-1);
+  background: var(--color-gray-1); /* Light gray background */
   overflow-x: auto;
 }
 
