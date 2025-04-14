@@ -1,0 +1,14 @@
+# Netlify build settings for Jekyll
+
+[build]
+  command = "bundle exec jekyll build" # Command to build the site
+  publish = "_site/"                  # Directory containing the built site
+
+[build.environment]
+  RUBY_VERSION = "3.4.2" # Specify the Ruby version used during build
+
+# Optional: Redirects and Headers can also be defined here
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
