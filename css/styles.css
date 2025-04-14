@@ -5452,6 +5452,11 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+/* Custom styles for 404 page */
+.error-icon {
+  margin-bottom: var(--vspace-1); /* Add space below the icon */
+}
+
 /* ===================================================================
  * # content wrap
  *
