@@ -1,0 +1,42 @@
+# Site settings
+title: Vaibhav Deokar
+email: vaibhav.2000.deokar@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Exploring AI, creativity, and technology. Seeking a challenging role to utilize technical and creative skills for organizational growth.
+baseurl: "" # the subpath of your site, e.g. /blog. If hosted at root, leave empty.
+url: "https://vaibhavdeokar.netlify.app" # the base hostname & protocol for your site
+twitter_username: vaibhavdeoka_20
+github_username:  dev-ai-kar
+linkedin_username: vaibhav-deokar
+
+# Build settings
+markdown: kramdown
+theme: null # Using custom theme based on existing files
+plugins: [jekyll-feed] # Add any Jekyll plugins inside the brackets
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Keep existing asset folders
+keep_files:
+  - css
+  - js
+  - images
+  - Vaibhav-Deokar-Resume.pdf # Ensure PDF is copied
+
+# Collections (Optional, for blog posts or other content types)
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title.html

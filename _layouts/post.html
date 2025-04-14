@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="column large-12">
+
+        <article class="s-content__entry format-standard">
+
+            {% if page.image %}
+            <div class="s-content__media">
+                <div class="s-content__post-thumb">
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+                    <!-- Add srcset if you plan to have different image sizes per post -->
+                </div>
+            </div> <!-- end s-content__media -->
+            {% endif %}
+
+            <div class="s-content__entry-header">
+                <h1 class="s-content__title s-content__title--post">{{ page.title | escape }}</h1>
+            </div> <!-- end s-content__entry-header -->
+
+            <div class="s-content__primary">
+
+                <div class="s-content__entry-content">
+
+                    {{ content }}
+
+                </div> <!-- end s-entry__entry-content -->
+
+                <div class="s-content__entry-meta">
+
+                    <div class="entry-author meta-blk">
+                        {% if page.author %}
+                        <!-- If you add author info to posts -->
+                        <!-- <div class="author-avatar">
+                            <img class="avatar" src="{{ site.baseurl }}/images/avatars/user-06.jpg" alt="">
+                        </div> -->
+                        <div class="byline">
+                            <span class="bytext">Posted By</span>
+                             {{ page.author }}
+                        </div>
+                        {% else %}
+                         <div class="byline">
+                            <span class="bytext">Posted By</span>
+                             <a href="#0">{{ site.title }}</a> <!-- Default to site title -->
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="meta-bottom">
+
+                        <div class="entry-cat-links meta-blk">
+                             {% if page.categories.size > 0 %}
+                            <div class="cat-links">
+                                <span>In</span>
+                                {% for cat in page.categories %}
+                                <a href="{{ site.baseurl }}/category/{{ cat | slugify }}/">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+                                {% endfor %}
+                            </div>
+                             {% endif %}
+
+                            <span>On</span>
+                             {{ page.date | date: "%b %-d, %Y" }}
+                        </div>
+
+                        {% if page.tags.size > 0 %}
+                        <div class="entry-tags meta-blk">
+                            <span class="tagtext">Tags</span>
+                            {% for tag in page.tags %}
+                            <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                    </div>
+
+                </div> <!-- s-content__entry-meta -->
+
+                <!-- Simple placeholder for pagination - needs more logic for real pagination -->
+                <!-- <div class="s-content__pagenav">
+                    {% if page.previous.url %}
+                    <div class="prev-nav">
+                        <a href="{{ page.previous.url | relative_url }}" rel="prev">
+                            <span>Previous</span>
+                            {{ page.previous.title }}
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <div class="next-nav">
+                        <a href="{{ page.next.url | relative_url }}" rel="next">
+                            <span>Next</span>
+                             {{ page.next.title }}
+                        </a>
+                    </div>
+                    {% endif %}
+                 </div> --> <!-- end s-content__pagenav -->
+
+            </div> <!-- end s-content__primary -->
+        </article> <!-- end entry -->
+
+    </div> <!-- end column -->
+</div> <!-- end row -->
+
+
+<!-- Comments - You might integrate a service like Disqus, Staticman, etc. -->
+<!-- <div class="comments-wrap">
+    <div id="comments" class="row">
+        <div class="column large-12">
+            <h3>Comments</h3>
+            Comment system integration goes here
+        </div>
+    </div>
+</div> -->

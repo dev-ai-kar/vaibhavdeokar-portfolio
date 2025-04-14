@@ -1,0 +1,46 @@
+<header class="s-header {% if page.url == "/" %} {% else %} s-header--opaque{% endif %}">
+
+    <div class="header-logo">
+        <a class="site-logo" href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/logo.png" alt="Homepage"></a>
+    </div>
+
+    <div class="row s-header__navigation">
+
+        <nav class="s-header__nav-wrap">
+
+            <h3 class="s-header__nav-heading h6">Navigate to</h3>
+
+            <ul class="s-header__nav">
+                <li {% if page.url == "/index.html" or page.url == "/" %} class="current" {% endif %}><a href="{{ site.baseurl }}/index.html" title="">Home</a></li>
+                <li class="has-children {% if page.url contains '/blog/' or page.url contains 'single-standard' %} current {% endif %}">
+                    <a href="#0" title="">Blog</a>
+                    <ul class="sub-menu">
+                        <!-- List recent posts -->
+                         {% for post in site.posts limit:5 %}
+                           <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                         {% endfor %}
+                         <!-- Add a link to a blog index page if you create one -->
+                         <!-- <li><a href="{{ site.baseurl }}/blog/">All Posts</a></li> -->
+                    </ul>
+                </li>
+                <li {% if page.url == "/about.html" %} class="current" {% endif %}><a href="{{ site.baseurl }}/about.html" title="">About</a></li>
+                <li {% if page.url == "/contact.html" %} class="current" {% endif %}><a href="{{ site.baseurl }}/contact.html" title="">Contact</a></li>
+            </ul> <!-- end s-header__nav-->
+
+            <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
+
+        </nav> <!-- end s-header__nav-wrap -->
+
+    </div> <!-- end s-header__navigation -->
+
+    <a class="s-header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+    <!-- Search functionality might need backend or client-side implementation if kept
+    <div class="s-header__search">
+        <div class="s-header__search-inner">
+                <a href="#0" title="Close Search" class="s-header__overlay-close">Close</a>
+        </div>
+    </div>
+    -->
+
+</header> <!-- end s-header -->

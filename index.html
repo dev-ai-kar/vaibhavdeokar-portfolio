@@ -1,587 +1,373 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+---
+layout: default
+title: Vaibhav Deokar | Polymath Portfolio | GenAI & AI/ML
+description: Exploring AI, creativity, and technology. Seeking a challenging role to utilize technical and creative skills for organizational growth.
+body_class: home # Optional class for body tag specific to homepage
+---
 
-<head>
+<!-- home
+   ================================================== s-home-->
+<section id="home" class=" s-home page-hero target-section" data-parallax="scroll"
+    data-image-src="{{ site.baseurl }}/images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Vaibhav Deokar</title>
-    <meta property="og:title" content="Vaibhav Deokar | Polymath Portfolio | GenAI & AI/ML" />
-    <meta property="og:description" content="Exploring AI, creativity, and technology. Seeking a challenging role to utilize technical and creative skills for organizational growth." />
-    <meta property="og:image" content="https://vaibhavdeokar.netlify.app/images/hero-bg-1200.jpg" />
-    <meta property="og:url" content="https://vaibhavdeokar.netlify.app/" />
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vaibhav Deokar | Polymath Portfolio | GenAI & AI/ML">
-    <meta name="twitter:description" content="Exploring AI, creativity, and technology. Seeking a challenging role to utilize technical and creative skills for organizational growth.">
-    <meta name="twitter:image" content="https://vaibhavdeokar.netlify.app/images/hero-bg-1200.jpg">
+    <div class="home-content">
 
-    <meta name="description" content="Looking for a challenging role in a reputable organization to utilize my technical,
-     database, creative and management skills for the growth of the organization as well as to enhance my knowledge about 
-     new and emerging trends in the market.">
-    <meta name="author" content="Vaibhav Deokar">
-    <!-- Chrome, Firefox OS, Opera -->
-    <meta name="theme-color" content="#862121">
+        <div class="row home-content__main">
 
+            <h3>Hello There</h3>
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+            <h1>
+                I am Vaibhav Deokar. <br> Exploring the intersections of AI, creativity, and technology.
+            </h1>
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+            <div class="home-content__buttons">
+                <a href="{{ site.baseurl }}/Vaibhav-Deokar-Resume.pdf" class="btn btn--stroke" target="_blank">
+                    Download CV
+                </a>
+                <a href="#works" class="smoothscroll btn btn--stroke">
+                    Latest Projects
+                </a>
+            </div>
 
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
-</head>
-
-<body id="top">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
-
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-
-       
-        <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
         </div>
 
-        <div class="row s-header__navigation">
+    </div> <!-- end home-content -->
+    <div class="s-hero__social hide-on-mobile-small">
+        <p>Follow</p>
+        <span></span>
+        <ul class="s-hero__social-icons">
+            <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.facebook.com/vaibhav.deokar.9461" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/vaibhav.deokar_/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:{{ site.email }}" ><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a href="tel:9167528087"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+    </div> <!-- end s-hero__social -->
+    <!-- end home-social -->
 
-            <nav class="s-header__nav-wrap">
+</section> <!-- end s-home -->
+<section class="s-styles">
+    <div class="row">
+        <div class="row narrow section-intro add-bottom text-center">
+            <div class="column large-12 intro">
 
-                <h3 class="s-header__nav-heading h6">Navigate to</h3>
+                <h1>More About Me.</h1>
 
-                <ul class="s-header__nav">
-                    <li class="current"><a href="index.html" title="">Home</a></li>
-                    <li class="has-children">
-                        <a href="#0" title="">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="single-standard.html">Standard Post</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html" title="">About</a></li>
-                    <li><a href="contact.html" title="">Contact</a></li>
-                </ul> <!-- end s-header__nav-->
-
-                <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
-
-            </nav> <!-- end s-header__nav-wrap -->
-
-        </div> <!-- end s-header__navigation -->
-
-        <a class="s-header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
-
-        <div class="s-header__search">
-
-            <div class="s-header__search-inner">
-
-                    <a href="#0" title="Close Search" class="s-header__overlay-close">Close</a>
-
-            </div> <!-- s-header__search-inner -->
-
-        </div> <!-- end s-header__search wrap -->
-
-
-    </header> <!-- end s-header -->
-    <!-- home
-   ================================================== s-home-->
-    <section id="home" class=" s-home page-hero target-section" data-parallax="scroll"
-        data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
-
-        <div class="home-content">
-
-            <div class="row home-content__main">
-
-                <h3>Hello There</h3>
-
-                <h1>
-                    I am Vaibhav Deokar. <br> Exploring the intersections of AI, creativity, and technology.
-                </h1>
-
-                <div class="home-content__buttons">
-                    <a href="Vaibhav-Deokar-Resume.pdf" class="btn btn--stroke" target="_blank">
-                        Download CV
-                    </a>
-                    <a href="#works" class="smoothscroll btn btn--stroke">
-                        Latest Projects
-                    </a>
-                </div>
-
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </div> <!-- end home-content -->
-        <div class="s-hero__social hide-on-mobile-small">
-            <p>Follow</p>
-            <span></span>
-            <ul class="s-hero__social-icons">
-                <li><a href="https://twitter.com/vaibhavdeoka_20" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.facebook.com/vaibhav.deokar.9461" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.instagram.com/vaibhav.deokar_/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/vaibhav-deokar/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="mailto:vaibhav.2000.deokar@gmail.com" ><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-                <li><a href="tel:9167528087"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/dev-ai-kar" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-            </ul>
-        </div> <!-- end s-hero__social -->
-        <!-- end home-social -->
-
-    </section> <!-- end s-home -->
-    <section class="s-styles">
-        <div class="row">
-            <div class="row narrow section-intro add-bottom text-center">
-                <div class="column large-12 intro">
-
-                    <h1>More About Me.</h1>
-
-                    <p class="lead">
-                       Driven by a passion for blending creative artistry with cutting-edge AI, I strive to build innovative solutions that push boundaries and tackle complex challenges. My approach merges human ingenuity with technological power to create impactful and intuitive experiences.
-                    </p>
-                    
-                    <div class="column large-half tab-full" data-aos="fade-up">
-                        <a href="Vaibhav-Deokar-Resume.pdf" target="_blank" class="btn btn--primary full-width">View Resume</a>
-                    </div>
-                    <!-- <hr class="fancy"> -->
-                </div>
-            </div>
-        </div> <!-- end row -->
-    </section>
-
-    
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about target-section">
-
-        
-
-        <div class="about-experience">
-
-            <div class="row heading-block" data-aos="fade-up">
-                <div class="column large-full">
-                    <h2 class="section-heading">Experience & Education</h2>
-                </div>
-            </div>
-
-            <div class="row about-experience__timeline">
+                <p class="lead">
+                   Driven by a passion for blending creative artistry with cutting-edge AI, I strive to build innovative solutions that push boundaries and tackle complex challenges. My approach merges human ingenuity with technological power to create impactful and intuitive experiences.
+                </p>
 
                 <div class="column large-half tab-full" data-aos="fade-up">
-                    <div class="timeline">
-
-                        <div class="timeline__icon-wrap">
-                            <span class="timeline__icon " aria-hidden="true">
-                                <i class="fas fa-briefcase fa-4x"></i>
-                            </span>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">December 2023 – Present</p>
-                                <h3 class="item-title">Cognizant Technology Solutions – GenAI</h3>
-                                <h5>Associate Data Scientist <small>(Mumbai, India)</small></h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <ul>
-                                    <li>Developed autonomous AI Assistant for Google gTech Ads (LLMs, grounding, Plx, Bazel, Piper).</li>
-                                    <li>Designed internal legal research tool (RAG, Neo4j Knowledge Graphs, Langchain).</li>
-                                    <li>Built/deployed/secured GenAI Interview Bot (Azure GPT-4, Bedrock Claude 3.5); led red-teaming & MLOps (Kubernetes, CI/CD).</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2022 – Dec 2023</p>
-                                <h3 class="item-title">Cognizant Technology Solutions - AI ML</h3>
-                                <h5>Programmer Analyst <small>(Mumbai, India)</small></h5>
-                            </div>
-                            <div class="timeline__desc">
-                               <ul>
-                                   <li>Led J&J document retrieval system development (RAG, GPT-3, Faiss), improving discovery rate by 61%.</li>
-                                   <li>Engineered an AI system for J&J automating medical request categorization (Embeddings, ML), reducing response times by 57%.</li>
-                                   <li>Applied advanced NLP (TensorFlow, PyTorch, Transformers) and optimized ML models (GPT-2, CodeGen, CUDA).</li>
-                               </ul>
-                            </div>
-                        </div>
-                         <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">March 2022 – June 2022</p>
-                                <h3 class="item-title">Cognizant Technology Solutions - AI ML</h3>
-                                <h5>Machine Learning Intern <small>(Mumbai, India)</small></h5>
-                            </div>
-                            <div class="timeline__desc">
-                               <ul>
-                                   <li>Developed and optimized data processing pipelines (NLP, ML, Python, Docker), improving efficiency by 35%.</li>
-                                   <li>Analyzed diverse datasets using AWS S3/SageMaker, Pandas, and NumPy.</li>
-                                   <li>Enhanced time series forecasting accuracy by 20% and applied computer vision (OpenCV, Azure).</li>
-                               </ul>
-                            </div>
-                        </div>
-
-                    </div>
+                    <a href="{{ site.baseurl }}/Vaibhav-Deokar-Resume.pdf" target="_blank" class="btn btn--primary full-width">View Resume</a>
                 </div>
-
-                <div class="column large-half tab-full" data-aos="fade-up">
-                    <div class="timeline">
-
-                        <div class="timeline__icon-wrap">
-                            <span class="timeline__icon">
-                                <i class="fas fa-graduation-cap fa-4x"></i>
-                            </span>
-                        </div>
-                        
-                         <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">Expected Start: Fall 2025</p>
-                                <h3 class="item-title">Syracuse University</h3>
-                                <h5>Master of Science (M.S.) in Applied Human-Centered Artificial Intelligence</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Focusing on applying advanced ML models ethically with a human-centered approach, gaining hands-on experience with LLMs and robust applications.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2018 - June 2022</p>
-                                <h3 class="item-title">Ramrao Adik Institute of Technology (Mumbai University)</h3>
-                                <h5>Bachelor of Engineering (B.E.) in Electronics Engineering</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Focused on electronic system design, fabrication, deployment, and software engineering principles for application development.</p>
-                            </div>
-                        </div>
+                <!-- <hr class="fancy"> -->
+            </div>
+        </div>
+    </div> <!-- end row -->
+</section>
 
 
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2005 - June 2016</p>
-                                <h3 class="item-title">Swami Vivekanand International School and Junior College</h3>
-                                <h5>Primary and Secondary Education</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Swami Vivekanand International School and Jr College situated at Kandivali,Mumbai was established in 1998. The school is affiliated to Indian Council of Secondary Education</p>
-                            </div>
-                        </div>
-                        
+<!-- about
+================================================== -->
+<section id="about" class="s-about target-section">
+
+    <div class="about-experience">
+
+        <div class="row heading-block" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading">Experience & Education</h2>
+            </div>
+        </div>
+
+        <div class="row about-experience__timeline">
+
+            <div class="column large-half tab-full" data-aos="fade-up">
+                <div class="timeline">
+
+                    <div class="timeline__icon-wrap">
+                        <span class="timeline__icon " aria-hidden="true">
+                            <i class="fas fa-briefcase fa-4x"></i>
+                        </span>
                     </div>
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">December 2023 – Present</p>
+                            <h3 class="item-title">Cognizant Technology Solutions – GenAI</h3>
+                            <h5>Associate Data Scientist <small>(Mumbai, India)</small></h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <ul>
+                                <li>Developed autonomous AI Assistant for Google gTech Ads (LLMs, grounding, Plx, Bazel, Piper).</li>
+                                <li>Designed internal legal research tool (RAG, Neo4j Knowledge Graphs, Langchain).</li>
+                                <li>Built/deployed/secured GenAI Interview Bot (Azure GPT-4, Bedrock Claude 3.5); led red-teaming & MLOps (Kubernetes, CI/CD).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2022 – Dec 2023</p>
+                            <h3 class="item-title">Cognizant Technology Solutions - AI ML</h3>
+                            <h5>Programmer Analyst <small>(Mumbai, India)</small></h5>
+                        </div>
+                        <div class="timeline__desc">
+                           <ul>
+                               <li>Led J&J document retrieval system development (RAG, GPT-3, Faiss), improving discovery rate by 61%.</li>
+                               <li>Engineered an AI system for J&J automating medical request categorization (Embeddings, ML), reducing response times by 57%.</li>
+                               <li>Applied advanced NLP (TensorFlow, PyTorch, Transformers) and optimized ML models (GPT-2, CodeGen, CUDA).</li>
+                           </ul>
+                        </div>
+                    </div>
+                     <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">March 2022 – June 2022</p>
+                            <h3 class="item-title">Cognizant Technology Solutions - AI ML</h3>
+                            <h5>Machine Learning Intern <small>(Mumbai, India)</small></h5>
+                        </div>
+                        <div class="timeline__desc">
+                           <ul>
+                               <li>Developed and optimized data processing pipelines (NLP, ML, Python, Docker), improving efficiency by 35%.</li>
+                               <li>Analyzed diverse datasets using AWS S3/SageMaker, Pandas, and NumPy.</li>
+                               <li>Enhanced time series forecasting accuracy by 20% and applied computer vision (OpenCV, Azure).</li>
+                           </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-        </div> <!-- end about-experience -->
+            <div class="column large-half tab-full" data-aos="fade-up">
+                <div class="timeline">
 
-    </section> <!-- end s-about -->
+                    <div class="timeline__icon-wrap">
+                        <span class="timeline__icon">
+                            <i class="fas fa-graduation-cap fa-4x"></i>
+                        </span>
+                    </div>
 
-    
+                     <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Expected Start: Fall 2025</p>
+                            <h3 class="item-title">Syracuse University</h3>
+                            <h5>Master of Science (M.S.) in Applied Human-Centered Artificial Intelligence</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Focusing on applying advanced ML models ethically with a human-centered approach, gaining hands-on experience with LLMs and robust applications.</p>
+                        </div>
+                    </div>
 
-    <!-- services (Capabilities)
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2018 - June 2022</p>
+                            <h3 class="item-title">Ramrao Adik Institute of Technology (Mumbai University)</h3>
+                            <h5>Bachelor of Engineering (B.E.) in Electronics Engineering</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Focused on electronic system design, fabrication, deployment, and software engineering principles for application development.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2005 - June 2016</p>
+                            <h3 class="item-title">Swami Vivekanand International School and Junior College</h3>
+                            <h5>Primary and Secondary Education</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Swami Vivekanand International School and Jr College situated at Kandivali,Mumbai was established in 1998. The school is affiliated to Indian Council of Secondary Education</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- end about-experience -->
+
+</section> <!-- end s-about -->
+
+
+<!-- services (Capabilities)
+================================================== -->
+<section id="services" class="s-services ss-dark target-section">
+
+    <div class="shadow-overlay"></div>
+
+    <div class="row heading-block heading-block--center" data-aos="fade-up">
+        <div class="column large-full">
+            <h2 class="section-heading section-heading--centerbottom">Capabilities</h2>
+            <p class="section-desc">
+                Leveraging a diverse skill set to architect and implement innovative solutions across various domains.
+            </p>
+        </div>
+    </div> <!-- end heading-block -->
+
+    <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+
+         <div class="column item-service" data-aos="fade-up">
+            <div class="item-service__content">
+                 <i class="fas fa-terminal fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">Programming & Scripting</h3>
+                <p>
+                Develop applications and automate tasks using Python, SQL, JavaScript, Java, C/C++.
+                </p>
+            </div>
+        </div>
+
+         <div class="column item-service" data-aos="fade-up">
+            <div class="item-service__content">
+                 <i class="fas fa-brain fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">AI & Machine Learning</h3>
+                <p>
+                Implement ML, Deep Learning, NLP, and CV solutions with TensorFlow, PyTorch, Scikit-learn.
+                </p>
+            </div>
+        </div>
+
+         <div class="column item-service" data-aos="fade-up">
+             <div class="item-service__content">
+                <i class="fas fa-magic fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">Generative AI</h3>
+                <p>
+                Build advanced GenAI solutions (LLMs, RAG, Agents) using frameworks like Langchain.
+                </p>
+            </div>
+        </div>
+
+         <div class="column item-service" data-aos="fade-up">
+            <div class="item-service__content">
+                 <i class="fas fa-laptop-code fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">Full-Stack Web Development</h3>
+                <p>
+                Craft modern web apps with React front-ends and Node.js back-ends for seamless experiences.
+                </p>
+            </div>
+        </div>
+
+         <div class="column item-service" data-aos="fade-up">
+            <div class="item-service__content">
+                 <i class="fas fa-cloud fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">Cloud Deployment & MLOps</h3>
+                 <p>
+                 Deploy scalable apps on AWS/Azure/GCP; integrate K8s, Docker, CI/CD for efficient MLOps.
+                 </p>
+            </div>
+         </div>
+
+         <div class="column item-service" data-aos="fade-up">
+             <div class="item-service__content">
+                 <i class="fas fa-database fa-3x" aria-hidden="true"></i>
+                 <h3 class="item-title">Data Management & Tools</h3>
+                <p>
+                Manage data with Faiss, Neo4j, SQL; analyze using Pandas/NumPy; utilize Git & Bazel workflows.
+                </p>
+             </div>
+         </div>
+
+    </div> <!-- end services-list -->
+
+</section> <!-- end s-services -->
+
+
+<!-- content
+================================================== -->
+<section id="works" class="s-content s-content--no-top-padding">
+    <!-- masonry
     ================================================== -->
-    <section id="services" class="s-services ss-dark target-section">
 
-        <div class="shadow-overlay"></div>
-
+    <div class="s-bricks">
         <div class="row heading-block heading-block--center" data-aos="fade-up">
             <div class="column large-full">
-                <h2 class="section-heading section-heading--centerbottom">Capabilities</h2>
+                <h2 class="section-heading section-heading--centerbottom">Selected Works</h2>
                 <p class="section-desc">
-                    Leveraging a diverse skill set to architect and implement innovative solutions across various domains.
+                    Here are some of my selected works I have done lately. Feel free to
+                    check them out.
                 </p>
             </div>
         </div> <!-- end heading-block -->
+        <div class="masonry">
+            <div class="bricks-wrapper h-group">
 
-        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+                <div class="grid-sizer"></div>
 
-             <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                     <i class="fas fa-terminal fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">Programming & Scripting</h3>
-                    <p>
-                    Develop applications and automate tasks using Python, SQL, JavaScript, Java, C/C++.
-                    </p>
-                </div>
-            </div>
-
-             <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                     <i class="fas fa-brain fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">AI & Machine Learning</h3>
-                    <p>
-                    Implement ML, Deep Learning, NLP, and CV solutions with TensorFlow, PyTorch, Scikit-learn.
-                    </p>
-                </div>
-            </div>
-
-             <div class="column item-service" data-aos="fade-up">
-                 <div class="item-service__content">
-                    <i class="fas fa-magic fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">Generative AI</h3>
-                    <p>
-                    Build advanced GenAI solutions (LLMs, RAG, Agents) using frameworks like Langchain.
-                    </p>
-                </div>
-            </div>
-
-             <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                     <i class="fas fa-laptop-code fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">Full-Stack Web Development</h3>
-                    <p>
-                    Craft modern web apps with React front-ends and Node.js back-ends for seamless experiences.
-                    </p>
-                </div>
-            </div>
-
-             <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                     <i class="fas fa-cloud fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">Cloud Deployment & MLOps</h3>
-                     <p>
-                     Deploy scalable apps on AWS/Azure/GCP; integrate K8s, Docker, CI/CD for efficient MLOps.
-                     </p>
-                </div>
-             </div>
-
-             <div class="column item-service" data-aos="fade-up">
-                 <div class="item-service__content">
-                     <i class="fas fa-database fa-3x" aria-hidden="true"></i>
-                     <h3 class="item-title">Data Management & Tools</h3>
-                    <p>
-                    Manage data with Faiss, Neo4j, SQL; analyze using Pandas/NumPy; utilize Git & Bazel workflows.
-                    </p>
-                 </div>
-             </div>
-
-        </div> <!-- end services-list -->
-
-    </section> <!-- end s-services -->
-
-
-    <!-- content
-    ================================================== -->
-    <section id="works" class="s-content s-content--no-top-padding">
-        <!-- masonry
-        ================================================== -->
-
-        <div class="s-bricks">
-            <div class="row heading-block heading-block--center" data-aos="fade-up">
-                <div class="column large-full">
-                    <h2 class="section-heading section-heading--centerbottom">Selected Works</h2>
-                    <p class="section-desc">
-                        Here are some of my selected works I have done lately. Feel free to 
-                        check them out.
-                    </p>
-                </div>
-            </div> <!-- end heading-block -->
-            <div class="masonry">
-                <div class="bricks-wrapper h-group">
-
-                    <div class="grid-sizer"></div>
-
-                    <article class="brick entry" data-aos="fade-up">
-                        <div class="entry__thumb">
-                            <a href="https://github.com/dev-ai-kar/google-neo4j-knowledge-graph-rag" target="_blank" class="thumb-link">
-                                <!-- Placeholder Image -->
-                                <img src="images/thumbs/masonry/what-is-knowledge-graph-1200.jpg" alt="Knowledge Graph Project Thumbnail">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="https://github.com/dev-ai-kar/google-neo4j-knowledge-graph-rag" target="_blank">Knowledge Graphs for RAG with Neo4j</a></h1>
-                                <div class="entry__meta">
-                                     <span class="cat-links">
-                                        <a href="#">Neo4j</a>
-                                        <a href="#">LangChain</a>
-                                        <a href="#">Python</a>
-                                        <a href="#">RAG</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="entry__excerpt">
-                                <p>
-                                    Built a Neo4j-based knowledge graph enhancing Retrieval Augmented Generation (RAG) accuracy. Implemented graph queries and integrated with LangChain for precise hybrid retrieval.
-                                </p>
-                            </div>
-                            <a class="entry__more-link" href="https://github.com/dev-ai-kar/google-neo4j-knowledge-graph-rag" target="_blank">View on GitHub</a>
-                        </div>
-                    </article>
-
-                     <article class="brick entry" data-aos="fade-up">
-                        <div class="entry__thumb">
-                            <a href="https://github.com/dev-ai-kar/expert-enigma" target="_blank" class="thumb-link">
-                                <!-- Placeholder Image -->
-                                 <img src="images/thumbs/masonry/models-hero.svg" alt="ML Deployment Project Thumbnail">
-                            </a>
-                        </div>
-                        <div class="entry__text">
-                            <div class="entry__header">
-                                <h1 class="entry__title"><a href="https://github.com/dev-ai-kar/expert-enigma" target="_blank">Deploy ML model on REST API & Web App</a></h1>
-                                <div class="entry__meta">
-                                     <span class="cat-links">
-                                        <a href="#">Python</a>
-                                        <a href="#">TensorFlow</a>
-                                        <a href="#">Django</a>
-                                        <a href="#">React</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="entry__excerpt">
-                                <p></p>
-                                   Deployed a handwritten digit recognition CNN model via a Django REST API, integrated with a React web app, using a dataset of 70,000 images.
-                                </p>
-                            </div>
-                             <a class="entry__more-link" href="https://github.com/dev-ai-kar/expert-enigma" target="_blank">View on GitHub</a>
-                        </div>
-                    </article>
-
-                </div> <!-- end brick-wrapper -->
-            </div> <!-- end masonry -->
-
-        </div> <!-- end s-bricks -->
-
-    </section> <!-- end s-content -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer class="s-footer">
-
-        <div class="s-footer__main">
-
-            <div class="row">
-
-                <div class="column large-3 medium-6 tab-12 s-footer__info">
-
-                    <h5>About Me</h5>
-
-                    <p>
-                       Driven by boundless curiosity, I explore the frontiers where technology meets creativity. Always building, learning, and connecting ideas to forge something new and impactful.
-                    </p>
-
-                </div> <!-- end s-footer__info -->
-
-                <!-- <div class="column large-2 medium-3 tab-6 s-footer__site-links">
-
-                    <h5>Site Links</h5>
-
-                    <ul>
-                        <li><a href="#0">About Us</a></li>
-                        <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">FAQ</a></li>
-                        <li><a href="#0">Terms</a></li>
-                        <li><a href="#0">Privacy Policy</a></li>
-                    </ul>
-
-                </div>  -->
-                <!-- end s-footer__site-links -->
-
-                <div class="column large-2 medium-3 tab-6 s-footer__social-links">
-
-                    <h5>Follow Me</h5>
-
-                    <ul>
-                        <li><a href="https://www.instagram.com/vaibhav.deokar_/" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/vaibhav.deokar.9461" target="_blank">Facebook</a></li>
-                        <li><a href="https://twitter.com/vaibhavdeoka_20" target="_blank">Twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/vaibhav-deokar/" target="_blank">Linkedin</a></li>
-                        <li><a href="https://github.com/dev-ai-kar" target="_blank">Github</a></li>
-                    </ul>
-
-                </div> <!-- end s-footer__social links -->
-
-                <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
-
-                    <h5>Let's Connect</h5>
-
-                    <p>Send me your email for further information</p>
-
-                    <div class="subscribe-form">
-
-                        <form id="mc-form" class="group" name="contact" method="POST" data-netlify="true">
-
-                            <input type="email" value="" name="dEmail" class="email" id="mc-email"
-                                placeholder="Your Email Address" required="">
-
-                            <input type="submit" name="subscribe" value="submit">
-
-                            <label for="mc-email" class="subscribe-message"></label>
-
-                        </form>
-
+                <article class="brick entry" data-aos="fade-up">
+                    <div class="entry__thumb">
+                        <a href="https://github.com/{{ site.github_username }}/google-neo4j-knowledge-graph-rag" target="_blank" class="thumb-link">
+                            <!-- Placeholder Image -->
+                            <img src="{{ site.baseurl }}/images/thumbs/masonry/what-is-knowledge-graph-1200.jpg" alt="Knowledge Graph Project Thumbnail">
+                        </a>
                     </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="https://github.com/{{ site.github_username }}/google-neo4j-knowledge-graph-rag" target="_blank">Knowledge Graphs for RAG with Neo4j</a></h1>
+                            <div class="entry__meta">
+                                 <span class="cat-links">
+                                    <a href="#">Neo4j</a>
+                                    <a href="#">LangChain</a>
+                                    <a href="#">Python</a>
+                                    <a href="#">RAG</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="entry__excerpt">
+                            <p>
+                                Built a Neo4j-based knowledge graph enhancing Retrieval Augmented Generation (RAG) accuracy. Implemented graph queries and integrated with LangChain for precise hybrid retrieval.
+                            </p>
+                        </div>
+                        <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/google-neo4j-knowledge-graph-rag" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
 
-                </div> <!-- end s-footer__subscribe -->
+                 <article class="brick entry" data-aos="fade-up">
+                    <div class="entry__thumb">
+                        <a href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank" class="thumb-link">
+                            <!-- Placeholder Image -->
+                             <img src="{{ site.baseurl }}/images/thumbs/masonry/models-hero.svg" alt="ML Deployment Project Thumbnail">
+                        </a>
+                    </div>
+                    <div class="entry__text">
+                        <div class="entry__header">
+                            <h1 class="entry__title"><a href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">Deploy ML model on REST API & Web App</a></h1>
+                            <div class="entry__meta">
+                                 <span class="cat-links">
+                                    <a href="#">Python</a>
+                                    <a href="#">TensorFlow</a>
+                                    <a href="#">Django</a>
+                                    <a href="#">React</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="entry__excerpt">
+                            <p></p>
+                               Deployed a handwritten digit recognition CNN model via a Django REST API, integrated with a React web app, using a dataset of 70,000 images.
+                            </p>
+                        </div>
+                         <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
 
-            </div> <!-- end row -->
+            </div> <!-- end brick-wrapper -->
+        </div> <!-- end masonry -->
 
-        </div> <!-- end s-footer__main -->
+    </div> <!-- end s-bricks -->
 
-        <div class="s-footer__bottom">
-            <div class="row">
-                <div class="column">
-                    <div class="ss-copyright">
-                        <span>© Copyright</span>
-                        <span>Design by <a href="#">Vaibhav</a></span>
-                        <span>Design by <a href="#">Vaibhav</a></span>
-                    </div> <!-- end ss-copyright -->
-                </div>
-            </div>
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                        <path
-                            d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div> <!-- end ss-go-top -->
-        </div> <!-- end s-footer__bottom -->
-
-    </footer> <!-- end s-footer -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
+</section> <!-- end s-content -->

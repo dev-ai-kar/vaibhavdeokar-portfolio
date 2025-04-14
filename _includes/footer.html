@@ -1,0 +1,81 @@
+<footer class="s-footer">
+
+    <div class="s-footer__main">
+
+        <div class="row">
+
+            <div class="column large-3 medium-6 tab-12 s-footer__info">
+
+                <h5>About Me</h5>
+
+                <p>
+                   Driven by boundless curiosity, I explore the frontiers where technology meets creativity. Always building, learning, and connecting ideas to forge something new and impactful.
+                </p>
+
+            </div> <!-- end s-footer__info -->
+
+            <div class="column large-2 medium-3 tab-6 s-footer__social-links">
+
+                <h5>Follow Me</h5>
+
+                <ul>
+                    <li><a href="https://www.instagram.com/vaibhav.deokar_/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/vaibhav.deokar.9461" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/vaibhavdeoka_20" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/in/vaibhav-deokar/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/dev-ai-kar" target="_blank">Github</a></li>
+                </ul>
+
+            </div> <!-- end s-footer__social links -->
+
+            <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
+
+                <h5>Let's Connect</h5>
+
+                <p>Send me your email for further information</p>
+
+                <div class="subscribe-form">
+                     <!-- Netlify forms need specific attributes -->
+                    <form id="mc-form" class="group" name="contact-footer" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <p class="hidden" style="display: none;"> <!-- Honeypot field -->
+                            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+                        </p>
+                        <input type="email" value="" name="dEmail" class="email" id="mc-email-footer"
+                            placeholder="Your Email Address" required="">
+
+                        <input type="submit" name="subscribe" value="submit">
+
+                        <label for="mc-email-footer" class="subscribe-message"></label>
+
+                    </form>
+
+                </div>
+
+            </div> <!-- end s-footer__subscribe -->
+
+        </div> <!-- end row -->
+
+    </div> <!-- end s-footer__main -->
+
+    <div class="s-footer__bottom">
+        <div class="row">
+            <div class="column">
+                <div class="ss-copyright">
+                    <span>© Copyright {{ site.time | date: '%Y' }}</span>
+                    <span>Design by <a href="#">Vaibhav Deokar</a></span> <!-- Keeping this as original -->
+                </div> <!-- end ss-copyright -->
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <path
+                        d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z"
+                        fill="currentColor"></path>
+                </svg>
+            </a>
+        </div> <!-- end ss-go-top -->
+    </div> <!-- end s-footer__bottom -->
+
+</footer> <!-- end s-footer -->
