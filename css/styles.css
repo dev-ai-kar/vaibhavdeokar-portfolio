@@ -1932,9 +1932,24 @@ pre > code {
   display: block;
   white-space: pre;
   line-height: var(--vspace-1);
-  padding: 0;
+  /* padding: 0; <- Default, override below for specific context */
   margin: 0;
   border: none;
+}
+
+/* Add specific padding for code blocks within post content */
+.s-content__entry-content pre > code {
+   padding: var(--vspace-0_5) var(--vspace-0_75); /* Add padding to prevent touching border */
+}
+
+/* Add specific padding for code elements within pre tags in the post content */
+.s-content__entry-content pre > code {
+    padding: var(--vspace-0_5) var(--vspace-0_75); /* Add padding */
+}
+
+/* Add specific padding for code blocks within post content */
+.s-content__entry-content pre > code {
+   padding: var(--vspace-0_25) var(--vspace-0_5); /* Add some padding */
 }
 
 del {
