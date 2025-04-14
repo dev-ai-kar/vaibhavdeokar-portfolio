@@ -12,7 +12,9 @@ linkedin_username: vaibhav-deokar
 # Build settings
 markdown: kramdown
 theme: null # Using custom theme based on existing files
-plugins: [jekyll-feed] # Add any Jekyll plugins inside the brackets
+plugins:
+  - jekyll-feed
+  - jekyll-archives # Add any Jekyll plugins inside the list
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -40,3 +42,13 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title.html
+
+# Jekyll Archives configuration
+jekyll-archives:
+  enabled:
+    - categories
+    # - tags # Uncomment if you want tag archives too
+  layout: category_archive # Specify the layout file name
+  permalinks:
+    category: '/categories/:name/'
+    # tag: '/tags/:name/' # Uncomment if using tags

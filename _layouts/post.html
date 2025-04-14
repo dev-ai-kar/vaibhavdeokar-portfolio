@@ -57,7 +57,7 @@ layout: default
                             <div class="cat-links">
                                 <span>In</span>
                                 {% for cat in page.categories %}
-                                <a href="{{ site.baseurl }}/category/{{ cat | slugify }}/">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+                                <a href="{{ site.baseurl }}/categories/{{ cat | slugify }}/">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
                                 {% endfor %}
                             </div>
                              {% endif %}

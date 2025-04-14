@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section class="s-content">
+<div class="row">
+    <div class="column large-full">
+
+        <div class="blog-list block-1-2 block-tab-full">
+
+            <h2 class="h-category-title">{{ page.title | capitalize }} Posts</h2>
+
+            {% if page.posts.size == 0 %}
+                <p>There are no posts in this category yet.</p>
+            {% else %}
+                {% for post in page.posts %}
+                <article class="col-block">
+
+                    <div class="blog-date">
+                        <a href="{{ post.url | relative_url }}">{{ post.date | date: "%B %d, %Y" }}</a>
+                    </div>
+
+                    <h3 class="h-entry-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+
+                    <p>
+                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </p>
+
+                </article>
+                {% endfor %}
+            {% endif %}
+        </div> <!-- end blog-list -->
+
+    </div> <!-- end column -->
+</div> <!-- end row -->
+</section> <!-- end s-content -->

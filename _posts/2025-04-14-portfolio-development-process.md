@@ -3,8 +3,8 @@ layout: post
 title:  "Building This Portfolio: Integrating Jekyll with an Existing Static Site on Netlify"
 date:   2025-04-14 20:01:00 +0530 # Adjust date/time if needed
 author: Vaibhav Deokar
-categories: [Development, Workflow, Jekyll]
-tags: [portfolio, jekyll, netlify, git, ruby, ssg, ci-cd]
+categories: [Workflow, Webdev] # Updated as requested
+tags: [portfolio, jekyll, netlify, git, ruby, ssg, ci-cd, development] # Moved Development and Jekyll to tags
 image: /images/sample-image.jpg # Placeholder image - update later
 ---
 

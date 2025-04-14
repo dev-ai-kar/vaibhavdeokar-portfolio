@@ -12,6 +12,16 @@
 
             <ul class="s-header__nav">
                 <li {% if page.url == "/index.html" or page.url == "/" %} class="current" {% endif %}><a href="{{ site.baseurl }}/index.html" title="">Home</a></li>
+                <li class="has-children {% if page.url contains '/categories/' %} current {% endif %}">
+                    <a href="#0" title="">Categories</a>
+                    <ul class="sub-menu">
+                        {% for category in site.categories %}
+                            {% assign category_name = category | first %}
+                            {% assign category_slug = category_name | slugify %}
+                            <li><a href="{{ site.baseurl }}/categories/{{ category_slug }}/">{{ category_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
                 <li class="has-children {% if page.url contains '/blog/' or page.url contains 'single-standard' %} current {% endif %}">
                     <a href="#0" title="">Blog</a>
                     <ul class="sub-menu">
