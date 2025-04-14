@@ -2,35 +2,93 @@
 layout: default
 ---
 
+{% comment %} --- Get list of masonry thumbnail images --- {% endcomment %}
+{% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/'" %}
+{% assign num_thumbs = masonry_thumbs | size %}
+
 <section class="s-content">
-<div class="row">
-    <div class="column large-full">
 
-        <div class="blog-list block-1-2 block-tab-full">
+    <!-- Page Header -->
+    <div class="s-pageheader">
+        <div class="row">
+            <div class="column large-12">
+                <h1 class="page-title">
+                    <span class="page-title__small-type">Category</span>
+                    {{ page.title | capitalize }}
+                </h1>
+            </div>
+        </div>
+    </div> <!-- end s-pageheader-->
 
-            <h2 class="h-category-title">{{ page.title | capitalize }} Posts</h2>
+    <!-- Masonry Grid -->
+    <div class="s-bricks s-bricks--half-top-padding">
 
-            {% if page.posts.size == 0 %}
-                <p>There are no posts in this category yet.</p>
-            {% else %}
-                {% for post in page.posts %}
-                <article class="col-block">
+        <div class="masonry">
+            <div class="bricks-wrapper h-group">
 
-                    <div class="blog-date">
-                        <a href="{{ post.url | relative_url }}">{{ post.date | date: "%B %d, %Y" }}</a>
-                    </div>
+                <div class="grid-sizer"></div>
 
-                    <h3 class="h-entry-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-                    <p>
-                    {{ post.excerpt | strip_html | truncatewords: 30 }}
-                    </p>
+                {% if page.posts.size == 0 %}
+                    <p>There are no posts in this category yet.</p>
+                {% elsif num_thumbs == 0 %}
+                     <p>Error: Could not find any thumbnail images in /images/thumbs/masonry/.</p>
+                {% else %}
+                    {% for post in page.posts %}
+                    <article class="brick entry">
+    
+                        <div class="entry__thumb">
+                            <a href="{{ post.url | relative_url }}" class="thumb-link">
+                                {% if post.image %}
+                                    {% assign img_src = post.image | relative_url %}
+                                {% else %}
+                                    {% assign thumb_index = forloop.index0 | modulo: num_thumbs %}
+                                    {% assign random_thumb = masonry_thumbs[thumb_index] %}
+                                    {% assign img_src = random_thumb.path | relative_url %}
+                                {% endif %}
+                                <img src="{{ img_src }}" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                                
+                                <div class="entry__meta">
+                                     <!-- Keep meta simple: just date -->
+                                     <span class="entry__date">
+                                         {{ post.date | date: "%B %d, %Y" }}
+                                     </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                {{ post.excerpt | strip_html | truncatewords: 30 }}
+                            </div>
+                            <a class="entry__more-link" href="{{ post.url | relative_url }}">Read More</a>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+                    {% endfor %}
+                {% endif %}
 
-                </article>
-                {% endfor %}
-            {% endif %}
-        </div> <!-- end blog-list -->
+            </div> <!-- end brick-wrapper -->
 
-    </div> <!-- end column -->
-</div> <!-- end row -->
+        </div> <!-- end masonry -->
+
+        <!-- Pagination (Optional) -->
+        <!-- 
+        <div class="row">
+            <div class="column large-12">
+                <nav class="pgn"> ... </nav>
+            </div>
+        </div> 
+        -->
+
+    </div> <!-- end s-bricks -->
+
 </section> <!-- end s-content -->
