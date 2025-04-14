@@ -9,17 +9,12 @@
   var cfg = {
       scrollDuration: 800, // smoothscroll duration
       mailChimpURL: "", // mailchimp url
-    },
-    $WIN = $(window);
-
-  // Add the User Agent to the <html>
-  // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
-  // const doc = document.documentElement;
-  // doc.setAttribute('data-useragent', navigator.userAgent);
-
-  /* Preloader
-   * -------------------------------------------------- */
-  const ssPreloader = function () {
+     },
+     $WIN = $(window);
+ 
+   /* Preloader
+    * -------------------------------------------------- */
+   const ssPreloader = function () {
     const preloader = document.querySelector("#preloader");
     if (!preloader) return;
 
@@ -34,15 +29,11 @@
           this.style.display = "none";
         }
       });
-    });
-
-    // force page scroll position to top at page refresh
-    // window.addEventListener('beforeunload' , function () {
-    //     window.scrollTo(0, 0);
-    // });
-  }; // end ssPreloader
-
-  /* Move header
+     });
+ 
+   }; // end ssPreloader
+ 
+   /* Move header
    * -------------------------------------------------- */
   var ssMoveHeader = function () {
     var hero = $(".page-hero"),
@@ -68,17 +59,12 @@
         hdr.addClass("scrolling");
       } else {
         hdr.removeClass("scrolling");
-      }
-    });
-
-    // $WIN.on('resize', function() {
-    //     if ($WIN.width() <= 768) {
-    //             hdr.removeClass('sticky offset scrolling');
-    //     }
-    // });
-  };
-
-  /* Mobile Menu
+       }
+     });
+ 
+   };
+ 
+   /* Mobile Menu
    * ---------------------------------------------------- */
   const ssMobileMenu = function () {
     const $navWrap = $(".s-header__nav-wrap");

@@ -4254,10 +4254,9 @@ body.search-is-visible {
   /* padding-bottom: 16.8rem; */
   background-color: #ffffff;
 }
+/* about-me styles removed */
 /*
-.s-about .row {
-  max-width: 1140px;
-}
+.s-about .row { ... }
 
 .s-about > [class*="about-"] {
   margin-bottom: 15.2rem;
