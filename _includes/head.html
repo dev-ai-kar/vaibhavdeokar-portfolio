@@ -4,14 +4,14 @@
 <title>{{ page.title | default: site.title }}</title>
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
 <meta property="og:description" content="{{ page.description | default: site.description }}" />
-<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/hero-bg-1200.jpg" /> <!-- Adjust image path if needed -->
+<meta property="og:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}{{ site.default_image }}{% endif %}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url | absolute_url }}" />
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/images/hero-bg-1200.jpg"> <!-- Adjust image path if needed -->
+<meta name="twitter:image" content="{% if page.image %}{{ site.url }}{{ site.baseurl }}{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}{{ site.default_image }}{% endif %}">
 
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="author" content="Vaibhav Deokar">
