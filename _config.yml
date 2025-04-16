@@ -43,6 +43,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title.html
+  cpp_notes: # Add the new collection for C++ notes
+    output: true # Generate individual pages for each note
+    permalink: /notes/cpp/:path.html # URL structure for C++ notes
 
 # Jekyll Archives configuration
 jekyll-archives:
