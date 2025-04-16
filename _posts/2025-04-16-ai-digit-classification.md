@@ -6,6 +6,8 @@ categories: [AI] # Broad category
 tags: [TensorFlow, CNN, Django, REST API, React, Machine Learning, Web Development] # Specific tags
 image: /images/thumbs/masonry/models-hero.svg # Placeholder image (matches index.html)
 description: "An AI application merging a TensorFlow CNN backend (Django REST API) with a React frontend for interactive handwritten digit classification."
+github_url: https://github.com/dev-ai-kar/expert-enigma
+author: Vaibhav Deokar
 # Note: Category should be single/broad, Tags should be multiple/specific.
 ---
 

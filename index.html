@@ -339,8 +339,16 @@ body_class: home # Optional class for body tag specific to homepage
                                 Built a Neo4j-based knowledge graph enhancing Retrieval Augmented Generation (RAG) accuracy. Implemented graph queries and integrated with LangChain for precise hybrid retrieval.
                             </p>
                         </div>
-                        <a class="entry__more-link" href="{% post_url 2025-04-16-knowledge-graph-rag-neo4j %}">View Blog Post &rarr;</a> <!-- Use post_url tag, added arrow -->
-                        <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/google-neo4j-knowledge-graph-rag" target="_blank">View on GitHub &rarr;</a> <!-- Added arrow -->
+                        {% for p in site.posts %}
+                          {% if p.path contains '_posts/2025-04-16-knowledge-graph-rag-neo4j.md' %}
+                            {% assign post = p %}
+                            {% break %}
+                          {% endif %}
+                        {% endfor %}
+                        <div><a class="entry__more-link" href="{{ post.url | relative_url }}">Read More &rarr;</a></div>
+                        {% if post.github_url %}
+                        <div><a class="entry__github-link" href="{{ post.github_url }}" target="_blank">View on GitHub &rarr;</a></div>
+                        {% endif %}
                     </div>
                 </article>
 
@@ -368,8 +376,16 @@ body_class: home # Optional class for body tag specific to homepage
                                Deployed a handwritten digit recognition CNN model via a Django REST API, integrated with a React web app, using a dataset of 70,000 images.
                             </p>
                         </div>
-                         <a class="entry__more-link" href="{% post_url 2025-04-16-ai-digit-classification %}">View Blog Post &rarr;</a> <!-- Link to blog post -->
-                         <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">View on GitHub &rarr;</a>
+                        {% for p in site.posts %}
+                          {% if p.path contains '_posts/2025-04-16-ai-digit-classification.md' %}
+                            {% assign post = p %}
+                            {% break %}
+                          {% endif %}
+                        {% endfor %}
+                         <div><a class="entry__more-link" href="{{ post.url | relative_url }}">Read More &rarr;</a></div>
+                         {% if post.github_url %}
+                         <div><a class="entry__github-link" href="{{ post.github_url }}" target="_blank">View on GitHub &rarr;</a></div>
+                         {% endif %}
                     </div>
                 </article>
 

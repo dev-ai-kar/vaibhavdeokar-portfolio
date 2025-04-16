@@ -69,12 +69,22 @@ layout: default
                                      <span class="entry__date">
                                          {{ post.date | date: "%B %d, %Y" }}
                                      </span>
+                                     {% if post.tags.size > 0 %}
+                                     <span class="cat-links">
+                                         {% for tag in post.tags %}
+                                             <a href="#">{{ tag }}</a>
+                                         {% endfor %}
+                                     </span>
+                                     {% endif %}
                                 </div>
                             </div>
                             <div class="entry__excerpt">
                                 {{ post.excerpt | strip_html | truncatewords: 30 }}
                             </div>
-                            <a class="entry__more-link" href="{{ post.url | relative_url }}">Read More</a>
+                            <div style="margin-top: var(--vspace-0_75);"><a class="entry__more-link" href="{{ post.url | relative_url }}">Read More &rarr;</a></div>
+                            {% if post.github_url %}
+                            <div><a class="entry__github-link" href="{{ post.github_url }}" target="_blank">View on GitHub &rarr;</a></div>
+                            {% endif %}
                         </div> <!-- end entry__text -->
                     
                     </article> <!-- end article -->

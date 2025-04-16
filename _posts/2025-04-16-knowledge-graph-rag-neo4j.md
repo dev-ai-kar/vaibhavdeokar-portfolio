@@ -1,14 +1,16 @@
 ---
 layout: post
-title: "Building Knowledge Graphs for RAG Systems with Neo4j & Google's Gemini"
+title: "Building Knowledge Graphs"
 date: 2025-04-16
 categories: [AI]
 tags: [Neo4j, LangChain, Python, RAG, Knowledge Graphs]
 image: /images/thumbs/masonry/what-is-knowledge-graph-1200.jpg # Featured image
 description: "An exploration of enhancing Retrieval Augmented Generation (RAG) systems using Neo4j knowledge graphs, based on the google-neo4j-knowledge-graph-rag repository."
+github_url: https://github.com/dev-ai-kar/google-neo4j-knowledge-graph-rag
+author: Vaibhav Deokar
 ---
 
-This comprehensive exploration examines how knowledge graphs can significantly enhance Retrieval Augmented Generation (RAG) systems, as demonstrated in the google-neo4j-knowledge-graph-rag repository. The repository offers a structured approach to building knowledge graphs using Neo4j and integrating them with embedding models to improve the quality of text retrieval for language models. Through a series of well-designed notebooks, users can learn to construct, query, and leverage knowledge graphs to create more effective RAG systems that provide language models with highly relevant contextual information.
+Building Knowledge Graphs for RAG Systems with Neo4j & Google's Gemini is a comprehensive exploration examines how knowledge graphs can significantly enhance Retrieval Augmented Generation (RAG) systems, as demonstrated in the google-neo4j-knowledge-graph-rag repository. The repository offers a structured approach to building knowledge graphs using Neo4j and integrating them with embedding models to improve the quality of text retrieval for language models. Through a series of well-designed notebooks, users can learn to construct, query, and leverage knowledge graphs to create more effective RAG systems that provide language models with highly relevant contextual information.
 
 ## Introduction to Knowledge Graphs and RAG Systems
 

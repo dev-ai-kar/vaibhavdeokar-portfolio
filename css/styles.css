@@ -3489,7 +3489,22 @@ input::-moz-focus-inner {
   border-bottom: 1px solid black;
 }
 
-/* ------------------------------------------------------------------- 
+/* Ensure GitHub link shares styling with more-link */
+.bricks-wrapper .entry__github-link {
+  display: inline-block;
+  font-size: calc(var(--text-size) * 0.6111);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: black; /* Match entry__more-link */
+  border-bottom: 1px solid transparent; /* Match entry__more-link */
+}
+.bricks-wrapper .entry__github-link:hover,
+.bricks-wrapper .entry__github-link:focus {
+   border-bottom: 1px solid black; /* Match entry__more-link hover */
+}
+
+
+/* -------------------------------------------------------------------
  * responsive:
  * common and reusable styles
  * ------------------------------------------------------------------- */
