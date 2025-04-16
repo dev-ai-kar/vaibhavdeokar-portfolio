@@ -39,17 +39,18 @@ layout: default
                 {% if cpp_notes_list.size == 0 %}
                     <p>No C++ notes found in the collection yet.</p>
                 {% else %}
-                    {% comment %} Reuse image logic from the main post loop {% endcomment %}
-                    {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/'" %}
+                    {% comment %} Reuse image logic: Filter for -600px images only {% endcomment %}
+                    {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/' and item.path contains '-600.jpg'" %}
                     {% assign num_thumbs = masonry_thumbs | size %}
 
                     {% for note in cpp_notes_list limit: 15 %}
                     <article class="brick entry">
                         <div class="entry__thumb">
                             <a href="{{ note.url | relative_url }}" class="thumb-link">
-                                {% comment %} Using pseudo-random masonry thumbs based on path length {% endcomment %}
+                                {% comment %} Pseudo-random based on index, title size, path size {% endcomment %}
                                 {% if num_thumbs > 0 %}
-                                    {% assign thumb_index = (forloop.index0 + note.path.size) | modulo: num_thumbs %}
+                                    {% assign title_size = (note.title | default: note.name).size %}
+                                    {% assign thumb_index = (forloop.index0 + title_size + note.path.size) | modulo: num_thumbs %}
                                     {% assign random_thumb = masonry_thumbs[thumb_index] %}
                                     <img src="{{ random_thumb.path | relative_url }}" alt="">
                                 {% else %}
@@ -100,7 +101,10 @@ layout: default
                     <p>There are no posts in this category yet.</p>
                 {% elsif num_thumbs == 0 %}
                      <p>Error: Could not find any thumbnail images in /images/thumbs/masonry/.</p>
-                {% else %}
+                 {% else %}
+                    {% comment %} Ensure main post loop also filters for -600px thumbs {% endcomment %}
+                    {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/' and item.path contains '-600.jpg'" %}
+                    {% assign num_thumbs = masonry_thumbs | size %}
                     {% for post in page.posts %}
                     <article class="brick entry">
     
@@ -109,7 +113,8 @@ layout: default
                                 {% if post.image %}
                                     {% assign img_src = post.image | relative_url %}
                                 {% else %}
-                                    {% assign thumb_index = forloop.index0 | modulo: num_thumbs %}
+                                    {% comment %} Pseudo-random based on index, title size, path size {% endcomment %}
+                                    {% assign thumb_index = (forloop.index0 + post.title.size + post.path.size) | modulo: num_thumbs %}
                                     {% assign random_thumb = masonry_thumbs[thumb_index] %}
                                     {% assign img_src = random_thumb.path | relative_url %}
                                 {% endif %}
