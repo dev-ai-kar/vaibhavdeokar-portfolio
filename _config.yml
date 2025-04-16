@@ -51,6 +51,13 @@ collections:
     permalink: /notes/cpp/:path.html # URL structure for C++ notes
     defaults: # Set default front matter for this collection
       layout: "post" # Apply the same layout used for regular blog posts
+    exclude: # Exclude non-markdown files from collection processing
+      - "*.jpg"
+      - "*.jpeg"
+      - "*.png"
+      - "*.gif"
+      - "*.svg"
+      # Add other relevant extensions if needed
 
 # Jekyll Archives configuration
 jekyll-archives:
