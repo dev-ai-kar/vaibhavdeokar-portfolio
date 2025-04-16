@@ -26,10 +26,13 @@ find _cpp_notes -name '*.md' -print0 | while IFS= read -r -d $'\0' file; do
   # For more complex capitalization, additional tools might be needed.
   gentitle=$(echo "$filename" | sed -e 's/[_-]/ /g' -e 's/\b\(.\)/\u\1/')
   # Escape quotes in title for YAML safety
-  gentitle_escaped=$(echo "$gentitle" | sed "s/'/''/g; s/\"/\\\\\"/g")
+  gentitle_escaped=$(echo "$gentitle" | sed "s/'/''/g; s/\"/\\\\\"/g") # Escape quotes for YAML
 
-  # Use sed to insert front matter with title. Using printf for clarity and safety.
-  printf '%s\n' "---" "title: \"${gentitle_escaped}\"" "---" | cat - "$file" > temp && mv temp "$file"
+  # Use sed -i to insert the front matter block directly
+  # Note: Need to escape special characters in the title for sed 'i' command
+  sed -i "1i---\
+title: \"${gentitle_escaped}\"\
+---" "$file"
 done
 
 # --- Add processing for future repos below ---
