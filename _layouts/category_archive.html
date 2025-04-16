@@ -27,23 +27,59 @@ layout: default
 
     {% comment %} Display C++ Notes specifically on the C++ category page {% endcomment %}
     {% if page.title == "C++" %}
-    <div class="row">
-        <div class="column large-12">
-            <div style="margin-bottom: var(--vspace-2); padding-bottom: var(--vspace-1); border-bottom: 1px solid var(--color-border);">
-                <h3>Referenced C++ Notes</h3>
-                <p>This category also relates to the following C++ notes:</p>
-                <ul>
+
+    <!-- Masonry Grid for C++ Notes -->
+    <div class="s-bricks s-bricks--half-top-padding s-bricks--alt">
+        <div class="masonry">
+            <div class="bricks-wrapper h-group">
+                <div class="grid-sizer"></div>
+                <div class="lines"><span></span><span></span><span></span></div>
+
                 {% assign cpp_notes_list = site.cpp_notes | reverse %}
-                {% for note in cpp_notes_list limit: 5 %}
-                  <li><a href="{{ note.url | relative_url }}">{{ note.title | default: note.name }}</a></li>
+                {% if cpp_notes_list.size == 0 %}
+                    <p>No C++ notes found in the collection yet.</p>
                 {% else %}
-                  <li>No C++ notes found in the collection yet.</li>
-                {% endfor %}
-                </ul>
-                <p><a href="{{ '/notes/cpp/' | relative_url }}">View All C++ Notes &rarr;</a></p>
-            </div>
-        </div>
-    </div>
+                    {% comment %} Reuse image logic from the main post loop {% endcomment %}
+                    {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/'" %}
+                    {% assign num_thumbs = masonry_thumbs | size %}
+
+                    {% for note in cpp_notes_list limit: 5 %}
+                    <article class="brick entry">
+                        <div class="entry__thumb">
+                            <a href="{{ note.url | relative_url }}" class="thumb-link">
+                                {% comment %} Using random masonry thumbs as placeholders {% endcomment %}
+                                {% if num_thumbs > 0 %}
+                                    {% assign thumb_index = forloop.index0 | modulo: num_thumbs %}
+                                    {% assign random_thumb = masonry_thumbs[thumb_index] %}
+                                    <img src="{{ random_thumb.path | relative_url }}" alt="">
+                                {% else %}
+                                    <img src="/images/sample-image.jpg" alt="Placeholder"> {% comment %} Fallback placeholder {% endcomment %}
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                {% comment %} Use note.title, fallback to note.name (filename without ext) {% endcomment %}
+                                <h2 class="entry__title"><a href="{{ note.url | relative_url }}">{{ note.title | default: note.name | escape }}</a></h2>
+                                <div class="entry__meta">
+                                     <span class="cat-links">
+                                         <a href="{{ '/notes/cpp/' | relative_url }}">C++ Note</a>
+                                     </span>
+                                     {% comment %} No reliable date assumed for notes {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                {% comment %} Generate excerpt from content - strip HTML first {% endcomment %}
+                                {{ note.content | strip_html | truncatewords: 30 }}
+                            </div>
+                            <div style="margin-top: var(--vspace-0_75);"><a class="entry__more-link" href="{{ note.url | relative_url }}">Read Note &rarr;</a></div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                {% endif %}
+            </div> <!-- end brick-wrapper -->
+        </div> <!-- end masonry -->
+    </div> <!-- end s-bricks for notes -->
     {% endif %}
 
     <!-- Masonry Grid -->
