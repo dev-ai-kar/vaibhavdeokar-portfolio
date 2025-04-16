@@ -25,6 +25,27 @@ layout: default
         </div>
     </div> <!-- end s-pageheader-->
 
+    {% comment %} Display C++ Notes specifically on the C++ category page {% endcomment %}
+    {% if page.title == "C++" %}
+    <div class="row">
+        <div class="column large-12">
+            <div style="margin-bottom: var(--vspace-2); padding-bottom: var(--vspace-1); border-bottom: 1px solid var(--color-border);">
+                <h3>Referenced C++ Notes</h3>
+                <p>This category also relates to the following C++ notes:</p>
+                <ul>
+                {% assign cpp_notes_list = site.cpp_notes | reverse %}
+                {% for note in cpp_notes_list limit: 5 %}
+                  <li><a href="{{ note.url | relative_url }}">{{ note.title | default: note.name }}</a></li>
+                {% else %}
+                  <li>No C++ notes found in the collection yet.</li>
+                {% endfor %}
+                </ul>
+                <p><a href="{{ '/notes/cpp/' | relative_url }}">View All C++ Notes &rarr;</a></p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     <!-- Masonry Grid -->
     <div class="s-bricks s-bricks--half-top-padding">
 
