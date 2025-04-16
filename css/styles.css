@@ -2157,6 +2157,15 @@ form,
   margin-bottom: var(--vspace-1);
 }
 
+/* Center images within blog post content */
+.s-content__entry-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* You might want to add max-width: 100%; if not already default */
+}
+
+
 /* =================================================================== 
  * # preloader
  *
