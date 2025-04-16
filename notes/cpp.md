@@ -18,8 +18,7 @@ permalink: /notes/cpp/ # Ensure this page is served at the directory root URL
                     <div class="s-content__entry-content">
                         <p>List of available C++ notes:</p>
                         <ul>
-                          {% assign sorted_notes = site.cpp_notes | sort: 'title' %} 
-                          {% for note in sorted_notes %}
+                          {% for note in site.cpp_notes %}
                             <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a></li>
                           {% endfor %}
                         </ul>
