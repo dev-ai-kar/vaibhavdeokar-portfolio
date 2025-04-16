@@ -5,6 +5,7 @@ date: 2025-04-16
 categories: C++
 tags: [C++, Advanced C++, Programming, Notes, Concepts, RAII, Move Semantics, Templates]
 description: Central resource page and discussion for C++ notes.
+author: "Vaibhav Deokar" # Added author for avatar display
 ---
 
 Looking for the main C++ notes section? You can find it here:
