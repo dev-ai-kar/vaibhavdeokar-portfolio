@@ -175,18 +175,6 @@ Here's how to set it up:
 Now that the external notes are being included in the build, you need to provide ways for users to find them:
 
 1.  **Create an Index Page:** Add a new page (e.g., `notes/cpp.md` or similar) in your main repository. Use Liquid to loop through the collection and list the notes:
-    ```liquid
-    ---
-    layout: default
-    title: C++ Notes Index
-    ---
-    <h1>C++ Notes</h1>
-    <ul>
-      {% for note in site.cpp_notes %}
-        <li><a href="{{ note.url | relative_url }}">{{ note.data.title | default: note.name }}</a></li>
-      {% endfor %}
-    </ul>
-    ```
     *(Note: `note.data.title` assumes you might add a `title:` field in the front matter later; otherwise, `note.name` gives the filename.)*
 2.  **Add Navigation:** Edit your site's header include (`_includes/header.html` or similar) to add a link to your new index page.
 
