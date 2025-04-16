@@ -2,6 +2,10 @@
 # Exit script if any command fails
 set -e
 
+echo "Cleaning up previous clones (if they exist)..."
+rm -rf _cpp_notes
+# Add future repos here too, e.g.: rm -rf _repo2_notes
+
 echo "Cloning external repositories..."
 # --- C++ Notes ---
 echo "Cloning cpp-notes..."
