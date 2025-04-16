@@ -46,6 +46,8 @@ collections:
   cpp_notes: # Add the new collection for C++ notes
     output: true # Generate individual pages for each note
     permalink: /notes/cpp/:path.html # URL structure for C++ notes
+    defaults: # Set default front matter for this collection
+      layout: "post" # Apply the same layout used for regular blog posts
 
 # Jekyll Archives configuration
 jekyll-archives:
