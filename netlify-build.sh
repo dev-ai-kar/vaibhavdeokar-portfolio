@@ -39,8 +39,10 @@ find $TEMP_CPP_DIR -maxdepth 1 -name "*.md" -exec cp {} $CPP_COLLECTION_DIR/ \;
 # Update image paths in the markdown files within the collection directory
 echo "Updating image paths in markdown files..."
 # Using find + sed. Note: -i requires GNU sed or careful handling on BSD/macOS. Netlify uses Ubuntu (GNU).
-# This regex attempts to catch markdown links `(img-data/...)` and html img tags `src="img-data/..."`
-find $CPP_COLLECTION_DIR -name "*.md" -exec sed -i -E 's|(\(|src=")(img-data/)([^")]+)(\)|")|\1/images/cpp/\3\4|g' {} \;
+# Update HTML image paths: src="img-data/..." -> src="/images/cpp/..."
+find $CPP_COLLECTION_DIR -name "*.md" -exec sed -i -E 's#src="(img-data/)([^"]+)"#src="/images/cpp/\2"#g' {} \;
+# Update Markdown image paths: (img-data/...) -> (/images/cpp/...)
+find $CPP_COLLECTION_DIR -name "*.md" -exec sed -i -E 's#\((img-data/)([^)]+)\)#(/images/cpp/\2)#g' {} \;
 
 # --- Add processing for future repos below ---
 
