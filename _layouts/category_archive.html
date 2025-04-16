@@ -14,7 +14,12 @@ layout: default
             <div class="column large-12">
                 <h1 class="page-title">
                     <span class="page-title__small-type">Category</span>
-                    {{ page.title | capitalize }}
+                    {% assign category_title_lower = page.title | downcase %}
+                    {% if category_title_lower == 'ai' %}
+                        AI
+                    {% else %}
+                        {{ page.title | capitalize }}
+                    {% endif %}
                 </h1>
             </div>
         </div>
