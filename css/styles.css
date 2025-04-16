@@ -3269,7 +3269,7 @@ input::-moz-focus-inner {
 }
 
 .s-bricks .masonry {
-  max-width: 1520px;
+  max-width: var(--width-grid-max);
   width: 94%;
   margin: 0 auto var(--vspace-2);
   overflow: hidden;
@@ -5467,7 +5467,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-content .row {
-  max-width: var(--row-max-width);
+  max-width: var(--width-grid-max); /* Use standard grid max width */
 }
 
 .s-content__entry {
@@ -5839,7 +5839,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-footer .row {
-  max-width: 1400px;
+  max-width: var(--width-grid-max);
 }
 
 .s-footer a {
