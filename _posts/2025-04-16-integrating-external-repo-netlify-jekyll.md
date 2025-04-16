@@ -2,7 +2,7 @@
 layout: post
 title: "Integrating External Repositories into Jekyll on Netlify"
 date: 2025-04-16
-categories: [Web Development, Jekyll, Netlify]
+categories: [Webdev]
 tags: [Git, GitHub Actions, CI/CD, Automation, Build Process]
 description: "A detailed guide on automatically including content from separate Git repositories into your main Jekyll site during the Netlify build process using a custom build script."
 author: Vaibhav Deokar
