@@ -32,8 +32,7 @@ exclude:
   - LICENSE
 
 # Include files/folders that start with _ or . by default
-include:
-  - _cpp_notes/img-data # Ensure images from cloned repo are copied
+include: [] # Removed _cpp_notes/img-data, as images are now handled by build script
 
 # Keep existing asset folders
 keep_files:
