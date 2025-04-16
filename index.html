@@ -346,14 +346,14 @@ body_class: home # Optional class for body tag specific to homepage
 
                  <article class="brick entry" data-aos="fade-up">
                     <div class="entry__thumb">
-                        <a href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank" class="thumb-link">
+                        <a href="{% post_url 2025-04-16-ai-digit-classification %}" class="thumb-link"> <!-- Link to blog post -->
                             <!-- Placeholder Image -->
                              <img src="{{ site.baseurl }}/images/thumbs/masonry/models-hero.svg" alt="ML Deployment Project Thumbnail">
                         </a>
                     </div>
                     <div class="entry__text">
                         <div class="entry__header">
-                            <h1 class="entry__title"><a href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">Deploy ML model on REST API & Web App</a></h1>
+                            <h1 class="entry__title"><a href="{% post_url 2025-04-16-ai-digit-classification %}">AI Digit Classification </a></h1> <!-- Updated Title & Link -->
                             <div class="entry__meta">
                                  <span class="cat-links">
                                     <a href="#">Python</a>
@@ -368,7 +368,8 @@ body_class: home # Optional class for body tag specific to homepage
                                Deployed a handwritten digit recognition CNN model via a Django REST API, integrated with a React web app, using a dataset of 70,000 images.
                             </p>
                         </div>
-                         <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">View on GitHub &rarr;</a> <!-- Added arrow -->
+                         <a class="entry__more-link" href="{% post_url 2025-04-16-ai-digit-classification %}">View Blog Post &rarr;</a> <!-- Link to blog post -->
+                         <a class="entry__more-link" href="https://github.com/{{ site.github_username }}/expert-enigma" target="_blank">View on GitHub &rarr;</a>
                     </div>
                 </article>
 
