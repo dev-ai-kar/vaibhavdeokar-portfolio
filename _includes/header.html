@@ -33,6 +33,14 @@
                          <!-- <li><a href="{{ site.baseurl }}/blog/">All Posts</a></li> -->
                     </ul>
                 </li>
+                <li class="has-children {% if page.url contains '/notes/' %} current {% endif %}">
+                    <a href="#0" title="">Notes</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ '/notes/cpp/' | relative_url }}">C++</a></li>
+                        <!-- Add future notes categories here, e.g.: -->
+                        <!-- <li><a href="{{ '/notes/data-structures/' | relative_url }}">Data Structures</a></li> -->
+                    </ul>
+                </li>
                 <li {% if page.url == "/about.html" %} class="current" {% endif %}><a href="{{ site.baseurl }}/about.html" title="">About</a></li>
                 <li {% if page.url == "/contact.html" %} class="current" {% endif %}><a href="{{ site.baseurl }}/contact.html" title="">Contact</a></li>
             </ul> <!-- end s-header__nav-->
