@@ -3,7 +3,7 @@ layout: post
 title:  "Hey, This Is A Standard Format Post."
 date:   2025-04-14 17:38:00 +0530 # Adjust date/time if needed
 author: Vaibhav Deokar # Or your name
-# categories: [Blogging] # Removed category as requested
+categories: [Design]
 tags: [format, structure, markdown, content, standard]
 image: /images/thumbs/single/single-post-1050.jpg # Optional: Path to post image
 ---
