@@ -8,6 +8,7 @@ url: "https://vaibhavdeokar.netlify.app" # the base hostname & protocol for your
 twitter_username: vaibhavdeoka_20
 github_username:  dev-ai-kar
 linkedin_username: vaibhav-deokar
+default_image: /images/hero-bg-1200.jpg # Default image for social media previews
 
 # Build settings
 markdown: kramdown
