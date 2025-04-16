@@ -43,13 +43,13 @@ layout: default
                     {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/'" %}
                     {% assign num_thumbs = masonry_thumbs | size %}
 
-                    {% for note in cpp_notes_list limit: 5 %}
+                    {% for note in cpp_notes_list limit: 15 %}
                     <article class="brick entry">
                         <div class="entry__thumb">
                             <a href="{{ note.url | relative_url }}" class="thumb-link">
-                                {% comment %} Using random masonry thumbs as placeholders {% endcomment %}
+                                {% comment %} Using pseudo-random masonry thumbs based on path length {% endcomment %}
                                 {% if num_thumbs > 0 %}
-                                    {% assign thumb_index = forloop.index0 | modulo: num_thumbs %}
+                                    {% assign thumb_index = (forloop.index0 + note.path.size) | modulo: num_thumbs %}
                                     {% assign random_thumb = masonry_thumbs[thumb_index] %}
                                     <img src="{{ random_thumb.path | relative_url }}" alt="">
                                 {% else %}
