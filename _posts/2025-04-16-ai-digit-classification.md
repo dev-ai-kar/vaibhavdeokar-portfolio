@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI Digit Classification Project – Merging Expert Enigma & Sketch-Frontend"
+title: "AI Digit Classification Project"
 date: 2025-04-16
 categories: [AI] # Broad category
 tags: [TensorFlow, CNN, Django, REST API, React, Machine Learning, Web Development] # Specific tags
@@ -13,7 +13,7 @@ description: "An AI application merging a TensorFlow CNN backend (Django REST AP
 In today’s technology landscape, blending artificial intelligence with intuitive web interfaces is a powerful approach to solving real-world problems. This unified project brings together a robust backend powered by a TensorFlow-based Convolutional Neural Network (CNN) and Django REST API with a user-centric React interface. The result is an AI application capable of classifying handwritten digits accurately and interactively, offering insights into both deep learning model deployment and modern web development.
 
 ### Project Overview
-The unified project consists of two interdependent components:
+The unified project consists of two interdependent components– Merging Expert Enigma Backend & Sketch-Frontend:
 
 - **Backend (Expert Enigma):**
   This part of the project provides a powerful Django-based REST API that processes and classifies digit images. The backend handles everything from image preprocessing (e.g., resizing, grayscale conversion) to conducting model inference with a pre-trained TensorFlow CNN model. The design focuses on clarity and scalability, ensuring that the model can be integrated in a production environment with relative ease.
