@@ -15,32 +15,7 @@ git clone https://github.com/dev-ai-kar/cpp-notes.git _cpp_notes
 # echo "Cloning repo2..."
 # git clone https://github.com/user/repo2.git _repo2_notes
 
-echo "Processing cloned repositories..."
-# --- Add front matter with generated title for cpp-notes ---
-echo "Adding front matter to cpp-notes..."
-# Loop through all markdown files found
-find _cpp_notes -name '*.md' -print0 | while IFS= read -r -d $'\0' file; do
-  # Get filename without extension (e.g., "sorting" from "sorting.md")
-  filename=$(basename "$file" .md)
-  # Basic title generation: replace underscores/hyphens with spaces, capitalize first letter (simple)
-  # For more complex capitalization, additional tools might be needed.
-  gentitle=$(echo "$filename" | sed -e 's/[_-]/ /g' -e 's/\b\(.\)/\u\1/')
-  # Escape quotes in title for YAML safety
-  gentitle_escaped=$(echo "$gentitle" | sed "s/'/''/g; s/\"/\\\\\"/g") # Escape quotes for YAML
-
-  # Use sed -i to insert the front matter block directly
-  # Note: Need to escape special characters in the title for sed 'i' command
-  sed -i "1i---\
-title: \"${gentitle_escaped}\"\
----" "$file"
-done
-
-# --- Add processing for future repos below ---
-# You would replicate the loop structure for other repos, adjusting paths.
-# echo "Adding front matter to repo2..."
-# find _repo2_notes -name '*.md' -print0 | while ... ; do ... done
-# find _repo2_notes -name '*.md' -exec sed -i '1i---\
-# ---' {} +
+# No processing needed here anymore, front matter must exist in source repo
 
 echo "Running Jekyll build..."
 bundle exec jekyll build
