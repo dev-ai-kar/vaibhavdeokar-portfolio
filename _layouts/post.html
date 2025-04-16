@@ -11,7 +11,7 @@ layout: default
 
             {% if page.image %}
             <div class="s-content__media">
-                <div class="s-content__post-thumb">
+                <div class="s-content__post-thumb" style="text-align: center;"> <!-- Added style to center image -->
                     <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
                     <!-- Add srcset if you plan to have different image sizes per post -->
                 </div>
