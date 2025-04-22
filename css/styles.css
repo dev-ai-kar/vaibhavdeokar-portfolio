@@ -1939,19 +1939,9 @@ pre > code {
   border: none;
 }
 
-/* Add specific padding for code blocks within post content */
+/* Add specific padding for code blocks within post content (Consolidated) */
 .s-content__entry-content pre > code {
-   padding: var(--vspace-0_5) var(--vspace-0_75); /* Add padding to prevent touching border */
-}
-
-/* Add specific padding for code elements within pre tags in the post content */
-.s-content__entry-content pre > code {
-    padding: var(--vspace-0_5) var(--vspace-0_75); /* Add padding */
-}
-
-/* Add specific padding for code blocks within post content */
-.s-content__entry-content pre > code {
-   padding: var(--vspace-0_25) var(--vspace-0_5); /* Add some padding */
+   padding: var(--vspace-0_5) var(--vspace-0_75); /* Use consistent padding */
 }
 
 del {
@@ -5593,6 +5583,7 @@ html.no-csstransitions .home-content__main {
   padding: 0 4.8rem;
   border-right: 1px solid var(--color-border);
   border-left: 1px solid var(--color-border);
+  min-width: 0; /* Allow flex item to shrink below content size */
 }
 
 .s-content__page-content {
