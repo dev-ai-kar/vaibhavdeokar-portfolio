@@ -36,7 +36,7 @@ permalink: /notes/cpp/ # Ensure this page is served at the directory root URL
                 </ul>
             </div>
 
-            <div class="column large-6 medium-6 tab-full">
+            <div class="column large-6 medium-6 tab-full" style="margin-top: 0;">
                 <ul style="list-style: none; padding-left: 0;">
                     {% for note in all_notes offset: notes_per_col %}
                     <li style="margin-bottom: 0.5em;"><a href="{{ note.url | relative_url }}">{{ note.title | default: note.name | escape }}</a></li>
