@@ -1,7 +1,7 @@
 # Netlify build settings for Jekyll
 
 [build]
-  command = "bundle exec jekyll build" # Command to build the site
+  command = "./netlify-build.sh" # Execute the build script
   publish = "_site/"                  # Directory containing the built site
 
 [build.environment]

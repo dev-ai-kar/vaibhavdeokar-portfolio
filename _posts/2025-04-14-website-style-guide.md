@@ -93,7 +93,8 @@ Use helper classes to float images within text content.
 
 ```html
 <p>
-    <img width="120" height="120" class="h-pull-left" alt="sample-image" src="images/sample-image.jpg">
+    <img width="120" height="120" class="h-pull-left" 
+    alt="sample-image" src="images/sample-image.jpg">
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
 </p>
 ```
