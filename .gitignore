@@ -17,3 +17,7 @@ node_modules/
 
 # Local Netlify folder
 .netlify
+
+# Personal notes
+_algorithms_notes/
+_cpp_notes/
