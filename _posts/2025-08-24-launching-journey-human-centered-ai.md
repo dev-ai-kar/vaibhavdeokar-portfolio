@@ -6,7 +6,7 @@ categories: AI
 tags: [Human-Centered AI, Collaborative Robotics, Syracuse University, GenAI, Personal Journey]
 author: Vaibhav Deokar
 description: "Embarking on a new chapter at Syracuse University to explore the frontiers of emotionally resonant AI and collaborative robotics."
-image: /images/hero-bg-1200.jpg
+image: /images/thumbs/single/Syracuse University.jpg
 ---
 
 After years of building GenAI solutions in the bustling tech corridors of Mumbai, I’ve arrived in Syracuse with a singular mission: to explore the frontiers of emotionally resonant AI and collaborative robotics. This isn’t just a career pivot—it’s a philosophical commitment to designing systems that understand, adapt, and empathize.
