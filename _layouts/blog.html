@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+{% comment %} --- Get list of masonry thumbnail images --- {% endcomment %}
+{% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/'" %}
+{% assign num_thumbs = masonry_thumbs | size %}
+
+<section class="s-content">
+
+    <!-- Page Header -->
+    <div class="s-pageheader">
+        <div class="row">
+            <div class="column large-12">
+                <h1 class="page-title">
+                    Blog
+                </h1>
+            </div>
+        </div>
+    </div> <!-- end s-pageheader-->
+
+    <!-- Masonry Grid -->
+    <div class="s-bricks s-bricks--half-top-padding">
+
+        <div class="masonry">
+            <div class="bricks-wrapper h-group">
+
+                <div class="grid-sizer"></div>
+
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                {% if site.posts.size == 0 %}
+                    <p>There are no posts yet.</p>
+                {% elsif num_thumbs == 0 %}
+                     <p>Error: Could not find any thumbnail images in /images/thumbs/masonry/.</p>
+                 {% else %}
+                    {% comment %} Ensure main post loop also filters for -600px thumbs {% endcomment %}
+                    {% assign masonry_thumbs = site.static_files | where_exp: "item", "item.path contains '/images/thumbs/masonry/' and item.path contains '-600.jpg'" %}
+                    {% assign num_thumbs = masonry_thumbs | size %}
+                    {% for post in site.posts %}
+                    <article class="brick entry">
+    
+                        <div class="entry__thumb">
+                            <a href="{{ post.url | relative_url }}" class="thumb-link">
+                                {% if post.image %}
+                                    {% assign img_src = post.image | relative_url %}
+                                {% else %}
+                                    {% comment %} Pseudo-random based on index, title size, path size {% endcomment %}
+                                    {% assign thumb_index = (forloop.index0 + post.title.size + post.path.size) | modulo: num_thumbs %}
+                                    {% assign random_thumb = masonry_thumbs[thumb_index] %}
+                                    {% assign img_src = random_thumb.path | relative_url %}
+                                {% endif %}
+                                <img src="{{ img_src }}" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                                
+                                <div class="entry__meta">
+                                     <!-- Keep meta simple: just date -->
+                                     <span class="entry__date">
+                                         {{ post.date | date: "%B %d, %Y" }}
+                                     </span>
+                                     {% if post.tags.size > 0 %}
+                                     <span class="cat-links">
+                                         {% for tag in post.tags %}
+                                             <a href="#">{{ tag }}</a>
+                                         {% endfor %}
+                                     </span>
+                                     {% endif %}
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                {{ post.excerpt | strip_html | truncatewords: 30 }}
+                            </div>
+                            <div style="margin-top: var(--vspace-0_75);"><a class="entry__more-link" href="{{ post.url | relative_url }}">Read More &rarr;</a></div>
+                            {% if post.github_url %}
+                            <div><a class="entry__github-link" href="{{ post.github_url }}" target="_blank">View on GitHub &rarr;</a></div>
+                            {% endif %}
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+                    {% endfor %}
+                {% endif %}
+
+            </div> <!-- end brick-wrapper -->
+
+        </div> <!-- end masonry -->
+
+    </div> <!-- end s-bricks -->
+
+</section> <!-- end s-content -->

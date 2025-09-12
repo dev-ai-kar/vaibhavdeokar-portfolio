@@ -29,8 +29,7 @@
                          {% for post in site.posts limit:5 %}
                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                          {% endfor %}
-                         <!-- Add a link to a blog index page if you create one -->
-                         <!-- <li><a href="{{ site.baseurl }}/blog/">All Posts</a></li> -->
+                         <li><a href="{{ site.baseurl }}/blog/">All Posts</a></li>
                     </ul>
                 </li>
                 <li class="has-children {% if page.url contains '/notes/' %} current {% endif %}">
@@ -38,6 +37,7 @@
                     <ul class="sub-menu">
                         <li><a href="{{ '/notes/cpp' | relative_url }}">C++ Notes</a></li>
                         <li><a href="{{ '/notes/algorithms' | relative_url }}">Algorithm Notes</a></li>
+                        <li><a href="{{ '/notes/nlp' | relative_url }}">NLP Notes</a></li>
                     </ul>
                 </li>
                 <li {% if page.url == "/about.html" %} class="current" {% endif %}><a href="{{ site.baseurl }}/about.html" title="">About</a></li>

@@ -296,6 +296,32 @@ body_class: home # Optional class for body tag specific to homepage
 
 <!-- content
 ================================================== -->
+<section id="blog-notes" class="s-content">
+    <div class="row">
+        <div class="column large-12">
+            <div class="row section-intro add-bottom text-center">
+                <div class="column large-12 intro">
+                    <h1>Explore My Writings</h1>
+                    <p class="lead">Dive into my collection of articles and notes on AI, programming, and more.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column large-half tab-full">
+                    <a href="{{ site.baseurl }}/blog/" class="btn btn--primary full-width">View All Blog Posts</a>
+                </div>
+                <div class="column large-half tab-full">
+                    <a href="#0" class="btn btn--stroke full-width">Browse Notes</a>
+                    <ul class="sub-menu" style="display: none;">
+                        <li><a href="{{ '/notes/cpp' | relative_url }}">C++ Notes</a></li>
+                        <li><a href="{{ '/notes/algorithms' | relative_url }}">Algorithm Notes</a></li>
+                        <li><a href="{{ '/notes/nlp' | relative_url }}">NLP Notes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="works" class="s-content s-content--no-top-padding">
     <!-- masonry
     ================================================== -->

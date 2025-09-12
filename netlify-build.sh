@@ -33,6 +33,16 @@ mkdir -p $ALGO_COLLECTION_DIR
 mv $ALGO_TEMP_DIR/notes/* $ALGO_COLLECTION_DIR/
 rm -rf $ALGO_TEMP_DIR
 
+# --- NLP Notes ---
+NLP_COLLECTION_DIR="_nlp_notes"
+NLP_REPO="https://github.com/dev-ai-kar/Natural-Language-Processing.git"
+
+echo "Cleaning up previous NLP Notes directory..."
+rm -rf $NLP_COLLECTION_DIR
+
+echo "Cloning nlp-notes repository directly into $NLP_COLLECTION_DIR..."
+git clone --depth 1 $NLP_REPO $NLP_COLLECTION_DIR
+
 # Add future repo clones here if needed
 
 echo "Running Jekyll build..."
@@ -72,12 +82,30 @@ else
   echo "Source image directory '$SOURCE_IMG_DIR_ALGO' not found. Skipping Algorithm image copy."
 fi
 
+# --- NLP Notes Images ---
+SOURCE_IMG_DIR_NLP="$NLP_COLLECTION_DIR/img-data"
+DEST_IMG_DIR_NLP="_site/notes/nlp/img-data"
+
+if [ -d "$SOURCE_IMG_DIR_NLP" ]; then
+  echo "Source image directory '$SOURCE_IMG_DIR_NLP' found."
+  echo "Creating destination directory '$DEST_IMG_DIR_NLP'..."
+  mkdir -p "$DEST_IMG_DIR_NLP"
+  echo "Copying images from '$SOURCE_IMG_DIR_NLP' to '$DEST_IMG_DIR_NLP'..."
+  cp -r "$SOURCE_IMG_DIR_NLP"/* "$DEST_IMG_DIR_NLP"/
+  echo "NLP notes images copied successfully."
+else
+  echo "Source image directory '$SOURCE_IMG_DIR_NLP' not found. Skipping NLP image copy."
+fi
+
 echo "Cleaning up potentially erroneous .html files in destination..."
 if [ -d "$DEST_IMG_DIR_CPP" ]; then
   find "$DEST_IMG_DIR_CPP" -type f -name '*.html.jpg' -o -name '*.html.jpeg' -o -name '*.html.png' -o -name '*.html.gif' -o -name '*.html.svg' -exec rm -f {} \;
 fi
 if [ -d "$DEST_IMG_DIR_ALGO" ]; then
   find "$DEST_IMG_DIR_ALGO" -type f -name '*.html.jpg' -o -name '*.html.jpeg' -o -name '*.html.png' -o -name '*.html.gif' -o -name '*.html.svg' -exec rm -f {} \;
+fi
+if [ -d "$DEST_IMG_DIR_NLP" ]; then
+  find "$DEST_IMG_DIR_NLP" -type f -name '*.html.jpg' -o -name '*.html.jpeg' -o -name '*.html.png' -o -name '*.html.gif' -o -name '*.html.svg' -exec rm -f {} \;
 fi
 echo "Cleanup finished."
 

@@ -52,6 +52,9 @@ collections:
   algorithm_notes:
     output: true
     permalink: /notes/algorithms/:path.html
+  nlp_notes:
+    output: true
+    permalink: /notes/nlp/:path.html
 
 # Defaults for collections
 defaults:
@@ -65,6 +68,12 @@ defaults:
     scope:
       path: ""
       type: "algorithm_notes"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "nlp_notes"
     values:
       layout: "post"
 
