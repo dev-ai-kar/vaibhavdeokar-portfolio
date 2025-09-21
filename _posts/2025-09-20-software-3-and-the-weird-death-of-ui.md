@@ -9,8 +9,6 @@ description: "A deep dive into the collision of Andrej Karpathy's 'Software 3.0'
 image: /images/thumbs/single/Karpathy-UI-Death.png
 ---
 
-## The End of an Era: How Software 3.0 is Causing the 'Weird Death' of User Interfaces
-
 We stand at a fascinating inflection point in the history of technology. For decades, our interaction with the digital world has been defined by graphical user interfaces (GUIs)—windows, icons, menus, and pointers. But what if that's all about to change? Two recent, thought-provoking videos paint a picture of a future where the very concepts of software and user interfaces are being rewritten before our eyes.
 
 The first, "The Weird Death Of User Interfaces," explores the stagnation of UI innovation and the rise of AI-driven interactions. The second, a talk by Andrej Karpathy, former Director of AI at Tesla, introduces the paradigm shift from traditional coding to "Software 3.0," where natural language and large language models (LLMs) are the new programming primitives.
