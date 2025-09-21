@@ -6,7 +6,7 @@ categories: [AI, Technology, Software Development, User Experience]
 tags: [Andrej Karpathy, Software 3.0, Generative AI, LLMs, UI, UX, Human-Computer Interaction, Future of Technology]
 author: Vaibhav Deokar
 description: "A deep dive into the collision of Andrej Karpathy's 'Software 3.0' and the impending 'death' of traditional user interfaces, exploring what this means for the future of how we interact with technology."
-image: /images/thumbs/single/Karpathy-UI-Death.jpg
+image: /images/thumbs/single/Karpathy-UI-Death.png
 ---
 
 ## The End of an Era: How Software 3.0 is Causing the 'Weird Death' of User Interfaces
