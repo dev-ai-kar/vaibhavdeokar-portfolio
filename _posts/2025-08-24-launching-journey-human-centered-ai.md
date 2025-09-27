@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🚀 Launching My Journey in Human-Centered AI at Syracuse"
+title: "Launching My Journey in Human-Centered AI at Syracuse"
 date: 2025-08-24 00:00:00 -0400
 categories: AI
 tags: [Human-Centered AI, Collaborative Robotics, Syracuse University, GenAI, Personal Journey, Software 3.0]
