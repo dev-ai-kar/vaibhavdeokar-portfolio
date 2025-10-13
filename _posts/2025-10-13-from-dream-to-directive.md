@@ -27,6 +27,8 @@ This technology is not just an incremental improvement; it's the foundational sh
 
 ### From a Dream to a Directive: Introducing Project EVE-a
 
+> **Follow the Journey:** The complete project, including all code and documentation, is available on the [Project EVE-a GitHub repository](https://github.com/dev-ai-kar/evea-robotics).
+
 Many of us have stories that feel like a part of us. For me, that story is *WALL·E*. I've always seen a bit of myself in him—a bit clunky, a bit lonely, diligently doing my work, and dreaming of a connection. Project EVE-a is the culmination of that dream: to build my own EVE.
 
 The name "EVE-a" is intentional. It's a blend of the sleek, futuristic robot from the film and the concept of an idealized self—an "Eva" who is confident and flawless. This project isn't about building a perfect machine. It's about the journey of reaching for that ideal and, in the end, learning to tell our "Eva" that it's okay to be imperfect. EVE-a is the embodiment of that connection we all seek.
